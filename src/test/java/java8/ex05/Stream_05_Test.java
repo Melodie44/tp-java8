@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.*;
@@ -69,7 +70,7 @@ public class Stream_05_Test {
 
         // TODO utiliser la méthode java.nio.file.Files.lines pour créer un stream de lignes du fichier naissances_depuis_1900.csv
         // Le bloc try(...) permet de fermer (close()) le stream après utilisation
-        try (Stream<String> lines = null) {
+        try (Stream<String> lines = Files.lines(Paths.get("C:\\Users\\ETY0009\\Documents\\workspace-sts-3.9.1.RELEASE\\tp-java8\\src\\docs").getParent())) {
 
             // TODO construire une MAP (clé = année de naissance, valeur = somme des nombres de naissance de l'année)
             Map<String, Integer> result = null;
@@ -85,7 +86,7 @@ public class Stream_05_Test {
 
         // TODO utiliser la méthode java.nio.file.Files.lines pour créer un stream de lignes du fichier naissances_depuis_1900.csv
         // Le bloc try(...) permet de fermer (close()) le stream après utilisation
-        try (Stream<String> lines = null) {
+        try (Stream<String> lines = Files.lines(Paths.get("C:\\Users\\ETY0009\\Documents\\workspace-sts-3.9.1.RELEASE\\tp-java8\\src\\docs").getParent())) {
 
             // TODO trouver l'année où il va eu le plus de nombre de naissance
             Optional<Naissance> result = null;
@@ -101,7 +102,7 @@ public class Stream_05_Test {
     public void test_collectingAndThen() throws IOException {
         // TODO utiliser la méthode java.nio.file.Files.lines pour créer un stream de lignes du fichier naissances_depuis_1900.csv
         // Le bloc try(...) permet de fermer (close()) le stream après utilisation
-        try (Stream<String> lines = null) {
+        try (Stream<String> lines = Files.lines(Paths.get("C:\\Users\\ETY0009\\Documents\\workspace-sts-3.9.1.RELEASE\\tp-java8\\src\\docs").getParent())) {
 
             // TODO construire une MAP (clé = année de naissance, valeur = maximum de nombre de naissances)
             // TODO utiliser la méthode "collectingAndThen" à la suite d'un "grouping"
