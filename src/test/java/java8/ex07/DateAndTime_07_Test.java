@@ -7,7 +7,9 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Formatter;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -28,7 +30,7 @@ public class DateAndTime_07_Test {
 
         // TODO transformer la date en LocalDate
 
-        LocalDate result = instant.atZone(ZoneId.systemDefault()).toLocalDate();
+        //LocalDate result = LocalDate.parse(date.toString(date.DateTimeFormatter.ofPattern("")));
 
         // TODO valoriser les différentes variables afin de rendre le test passant
 
